@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Enlace al archivo de estilos -->
+</head>
+<body>
+    <header>
+        <h1>Gestor de Tareas</h1>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <!-- Campo para ingresar una nueva tarea -->
+            <input type="text" id="nueva-tarea" placeholder="Escribe tu tarea...">
+            <button id="agregar-tarea">Agregar Tarea</button>
+
+
+            <!-- Lista de tareas dinámicas -->
+            <ul id="lista-tareas"></ul>
+        </div>
+        <div id="mensaje-exito" style="display: none;">¡Tarea agregada con éxito!</div>
+    </main>
+
+    <footer>
+        <p>© 2025 Gestor de Tareas. Todos los derechos reservados al pana rabbit.</p>
+    </footer>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

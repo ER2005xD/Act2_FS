@@ -1,0 +1,203 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Título */
+h1 {
+    font-size: 1.8rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7) ; /* Sombra del titulo */
+}
+
+
+#mensaje-exito {
+    display: none; /* Se mantiene para ocultar inicialmente */
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: fixed; /* Permite centrarlo en la pantalla */
+    bottom: 20px;
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajusta el punto de referencia para centrarlo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    text-align: end;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo del input */
+input[type="text"] {
+    width: calc(100% - 100px); /* Ajuste para el tamaño del botón */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+    
+}
+
+/* Contenedor del input y botón */
+.input-boton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Botón agregar */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Lista de tareas */
+ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    text-align: left;
+}
+
+/* Tarea individual */
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, trasform 0.3s ease;
+}
+
+.tarea.mostrar{
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Botones dentro de las tareas */
+.tarea-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.tarea button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tarea button:hover {
+    background-color: #e64a19;
+}
+
+/* Botón editar */
+.tarea .editar {
+    background-color: #2196F3;
+}
+
+.tarea .editar:hover {
+    background-color: #1976D2;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .contenedor {
+        width: 90%;
+        height: auto;
+    }
+
+    .tarea {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tarea-botones {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1025px) {
+    .contenedor {
+        width: 60%;
+        height: auto;
+    }
+}
